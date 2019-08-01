@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th colspan="2">Résultats du formulaire</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>Sexe</td>
+    <td>Nom</td>
+    <td>Prénom</td>
+    <td>Surnom</td>
+    <td>Date de naissance</td>
+    <td>Taille</td>
+  </tr>
+  <tbody>
+    <tr *ngFor="let p of t" let indice= index>
+      <td> {{p._sexe}}</td>
+      <td> {{p._nom}}</td>
+      <td> {{p._prenom}}</td>
+      <td> {{p._surnom}}</td>
+      <td> {{p._dateDeNaissance}}</td>
+      <td> {{p._taille}}</td>
+    </tr>
+  </tbody>
+  </table>
+  <p>{{t[0]._sexe}}</p>

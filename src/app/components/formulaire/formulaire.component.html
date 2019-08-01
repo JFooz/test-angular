@@ -1,0 +1,50 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+
+  <div class="example-container">
+
+    <mat-list>
+      <h4>Ecris ton nom connard</h4>
+      <mat-form-field>
+        <input matInput placeholder="Name" formControlName="nom">
+      </mat-form-field>
+    </mat-list>
+
+    <mat-list>
+      <h4>Ecris ton prénom connard</h4>
+      <mat-form-field>
+        <input matInput placeholder="Firstname" formControlName="prenom">
+      </mat-form-field>
+    </mat-list>
+
+    <mat-list>
+      <mat-form-field>
+        <input matInput placeholder="Alias" formControlName="surnom">
+      </mat-form-field>
+    </mat-list>
+
+    <mat-list>
+      <mat-radio-group aria-label="Sexe" formControlName="sexe">
+        <mat-radio-button value="Homme">Homme</mat-radio-button>
+        <mat-radio-button value="Femme">Femme</mat-radio-button>
+      </mat-radio-group>
+    </mat-list>
+
+    <mat-list>
+      <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1000" min="100" max="250"
+        placeholder="Votre taille (en cm)" formControlName="taille"></mat-slider>
+    </mat-list>
+
+    <mat-list>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Choisissez votre date de naissance" formControlName="dateDeNaissance">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </mat-list>
+
+
+  </div>
+
+  <button type="submit">Envoyer</button>
+
+</form>

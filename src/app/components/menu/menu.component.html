@@ -1,0 +1,35 @@
+<mat-sidenav-container fullscreen>
+  
+  <mat-sidenav opened fixedInViewport="true"  id="sidebar" mode="side" >
+    
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <span>Menu</span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    
+    <mat-nav-list>
+      
+      <a mat-list-item="#" routerLink="acceuil"> Accueil</a>
+      <a mat-list-item="#" routerLink="test"> Test</a>
+      <a mat-list-item="#" routerLink="formulaire"> Formulaire</a>
+      <a mat-list-item="#" routerLink="resultats"> Résultats</a>
+   
+    </mat-nav-list>
+ 
+  </mat-sidenav>
+  
+  <mat-sidenav-content id="content">
+    
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <span>Angular c'est de la merde</span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    
+    <router-outlet></router-outlet>
+  
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
